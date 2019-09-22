@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import * as apisw from '../services/apisw';
 
 export default class People extends Component {
@@ -10,7 +10,7 @@ export default class People extends Component {
     }
 
     componentDidMount() {
-        apisw.getPersons()
+        apisw.getFilms()
             .then(persons => this.setState({ persons }))
     }
 
@@ -20,7 +20,6 @@ export default class People extends Component {
                 <h3>Personagens</h3>
                     <br/>
                     {this.state.persons.map((item, i) => {
-                        console.log(item);
                         return (<div key={i}> {item.name}</div>);
                     })}
                 </div>

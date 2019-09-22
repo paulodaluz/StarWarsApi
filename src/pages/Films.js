@@ -20,7 +20,6 @@ export default class Films extends Component {
                 <h3>Filmes</h3>
                 <br/>
                 {this.state.films.map((item, i) => {
-                    console.log(item);
                     return (<div key={i}> {item.title}</div>);
                 })}
             </div>

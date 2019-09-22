@@ -36,7 +36,7 @@ export default class Header extends Component {
                                 <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
                                     <ul className="nav navbar-nav menu_nav ml-auto">
                                         <li className="nav-item active">
-                                            <Link to="/home" className="nav-link">Home</Link>
+                                            <Link to="/" className="nav-link">Home</Link>
                                         </li>
                                         
                                         <li className="nav-item">
