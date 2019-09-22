@@ -20,7 +20,8 @@ export default class People extends Component {
                 <h3>Personagens</h3>
                     <br/>
                     {this.state.persons.map((item, i) => {
-                        return (<div key={i}> {item.name} - {item.birth_year}</div>);
+                        console.log(item);
+                        return (<div key={i}> {item.name}</div>);
                     })}
                 </div>
         )
