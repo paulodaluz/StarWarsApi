@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as apisw from '../services/apisw';
+import Table from 'react-bootstrap/Table';
 
 export default class People extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ export default class People extends Component {
     }
 
     componentDidMount() {
-        apisw.getFilms()
+        apisw.getPersons()
             .then(persons => this.setState({ persons }))
     }
 

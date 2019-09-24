@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as apisw from '../services/apisw';
+import Table from 'react-bootstrap/Table';
 
 export default class Films extends Component {
     constructor(props) {
@@ -19,9 +20,26 @@ export default class Films extends Component {
             <div style={{ 'padding': '200px 200px 100px 0' }}>
                 <h3>Filmes</h3>
                 <br/>
-                {this.state.films.map((item, i) => {
-                    return (<div key={i}> {item.title}</div>);
-                })}
+
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>#id</th>
+                            <th>Titulo</th>
+                            <th>Diretor</th>
+                            <th>Data de realização</th>
+                        </tr>
+
+                        {this.state.films.map((item, i) => {
+                            return <tr key={i}>
+                                <th>{i}</th>
+                                <th>{item.title}</th>
+                                <th>{item.director}</th>
+                                <th>{item.release_date}</th>
+                            </tr>   
+                        })}
+                    </thead>
+                </Table>
             </div>
         )
     }

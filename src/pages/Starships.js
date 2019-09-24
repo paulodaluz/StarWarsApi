@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as apisw from '../services/apisw';
+import Table from 'react-bootstrap/Table';
 
 export default class Starships extends Component {
     constructor(props) {
