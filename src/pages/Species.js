@@ -20,11 +20,34 @@ export default class Species extends Component {
             <div style={{ 'padding': '200px 200px 100px 0' }}>
                 <h3>Espécies</h3>
                 <br />
-                {this.state.species.map((item, i) => {
-                    console.log(item);
-                    
-                    return (<div key={i}> {item.name}</div>);
-                })}
+
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>#id</th>
+                            <th>Nome</th>
+                            <th>Classificação</th>
+                            <th>Designação</th>
+                            <th>Tempo de vida médio</th>
+                            <th>Altura Média</th>
+                            <th>Lingua</th>
+                            <th>Cor da Skin</th>
+                        </tr>
+
+                        {this.state.species.map((item, i) => {
+                            return <tr key={i}>
+                                <th>{i+1}</th>
+                                <th>{item.name}</th>
+                                <th>{item.classification}</th>
+                                <th>{item.designation}</th>
+                                <th>{item.average_lifespan}</th>
+                                <th>{item.average_height}</th>
+                                <th>{item.language}</th>
+                                <th>{item.skin_colors}</th>
+                            </tr>   
+                        })}
+                    </thead>
+                </Table>
             </div>
         )
     }

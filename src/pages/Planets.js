@@ -20,9 +20,33 @@ export default class Planets extends Component {
             <div style={{ 'padding': '200px 200px 100px 0' }}>
                 <h3>Planetas</h3>
                 <br />
-                {this.state.planets.map((item, i) => {
-                    return (<div key={i}> {item.name}</div>);
-                })}
+
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>#id</th>
+                            <th>Nome</th>
+                            <th>Clima</th>
+                            <th>População</th>
+                            <th>Período Orbital</th>
+                            <th>Diametro</th>
+                            <th>Gravidade</th>
+                            <th>Terreno</th>
+                        </tr>
+                            {this.state.planets.map((item, i) => {
+                                return <tr key={i}>
+                                    <th>{i+1}</th>
+                                    <th>{item.name}</th>
+                                    <th>{item.climate}</th>
+                                    <th>{item.population}</th>
+                                    <th>{item.orbital_period}</th>
+                                    <th>{item.diameter}</th>
+                                    <th>{item.gravity}</th>
+                                    <th>{item.terrain}</th>
+                                </tr>   
+                            })}
+                    </thead>
+                </Table>
             </div>
         )
     }

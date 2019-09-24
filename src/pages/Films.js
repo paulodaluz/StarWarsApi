@@ -31,7 +31,7 @@ export default class Films extends Component {
 
                         {this.state.films.map((item, i) => {
                             return <tr key={i}>
-                                <th>{i}</th>
+                                <th>{i+1}</th>
                                 <th>{item.title}</th>
                                 <th>{item.director}</th>
                                 <th>{item.release_date}</th>
