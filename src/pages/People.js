@@ -20,9 +20,29 @@ export default class People extends Component {
                 <div style={{'padding': '200px 200px 100px 0'}}>
                 <h3>Personagens</h3>
                     <br/>
-                    {this.state.persons.map((item, i) => {
-                        return (<div key={i}> {item.name}</div>);
-                    })}
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>#id</th>
+                            <th>Nome</th>
+                            <th>Genero</th>
+                            <th>skin color</th>
+                            <th>Altura</th>
+                            <th>Peso</th>
+                        </tr>
+
+                        {this.state.persons.map((item, i) => {
+                            return <tr key={i}> 
+                            <th>{i}</th>
+                            <th>{item.name}</th>
+                            <th>{item.gender}</th>
+                            <th>{item.skin_color}</th>
+                            <th>{item.height}</th>
+                            <th>{item.mass}</th>
+                            </tr>
+                        })}
+                    </thead>
+                </Table>
                 </div>
         )
     }

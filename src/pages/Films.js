@@ -20,7 +20,6 @@ export default class Films extends Component {
             <div style={{ 'padding': '200px 200px 100px 0' }}>
                 <h3>Filmes</h3>
                 <br/>
-
                 <Table striped bordered hover>
                     <thead>
                         <tr>
