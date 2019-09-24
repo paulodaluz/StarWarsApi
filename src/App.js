@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom'
 
 //Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Sobre from './pages/Sobre';
 import Films from './pages/Films';
 import People from './pages/People';
 import Planets from './pages/Planets';
@@ -29,7 +29,6 @@ class App extends React.Component {
 				<Route path="/planetas" component={Planets} />
 				<Route path="/species" component={Species} />
 				<Route path="/starships" component={Starships} />
-				<Route path="/sobre" component={Sobre} />
 			</Switch>
 			<Footer/>
 		</BrowserRouter>

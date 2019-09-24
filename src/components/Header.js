@@ -26,7 +26,12 @@ export default class Header extends Component {
                         <nav className="navbar navbar-expand-lg navbar-light">
                             <div className="container">
                                 {/* MUDAR AQUI EM BAIXO A LOGO */}
-                                <a className="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="" /><img src="img/logo-2.png" alt="" /></a>
+                                <Link to="/" className="navbar-brand logo_h">
+                                    <div style={{ display: 'flex', alignItems: 'flex-start'}} >
+                                        <img style={{width: '51px'}} src="img/logo.png" alt="Logo dos StarWars" />
+                                        <h1 style={{color: 'white', paddingLeft: 10, paddingTop: 3}}>StarWars Lovers</h1>
+                                    </div>
+                                </Link>
                                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="icon-bar"></span>
                                     <span className="icon-bar"></span>
@@ -39,12 +44,10 @@ export default class Header extends Component {
                                             <Link to="/" className="nav-link">Home</Link>
                                         </li>
                                         
-                                        <li className="nav-item">
-                                            <Link to="/pessoas" className="nav-link">Pessoas</Link>
-                                        </li>
                                         <li className="nav-item submenu dropdown">
                                             <a href="paginas" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Paginas</a>
                                             <ul className="dropdown-menu">
+                                                <li className="nav-item"><Link to="/pessoas" className="nav-link">Pessoas</Link></li>
                                                 <li className="nav-item"><Link to="/filmes" className="nav-link">filmes</Link></li>
                                                 <li className="nav-item"><Link to="/planetas" className="nav-link">Planetas</Link></li>
                                                 <li className="nav-item"><Link to="/species" className="nav-link">Espécies</Link></li>
@@ -52,7 +55,6 @@ export default class Header extends Component {
                                             </ul>
                                         </li>
                                         <li className="nav-item"><Link to="/login" className="nav-link">Login</Link></li>
-                                        <li className="nav-item"><Link to="/sobre" className="nav-link">Sobre</Link></li>
                                     </ul>
                                 </div>
                             </div>

@@ -18,9 +18,8 @@ export default class Starships extends Component {
     render() {
         return (
             <div style={{ 'padding': '200px 200px 100px 0' }}>
-                <h3>Naves Espáciais</h3>
-                <br />
-                
+                <h3 style={{ marginBottom: 30 }} >Naves Espáciais</h3>
+
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -32,7 +31,7 @@ export default class Starships extends Component {
                             <th>hyperdrive_rating</th>
                             <th>Comprimento</th>
                             <th>Fabricante</th>
-                            <th>Velocidade maxima na atmosfera</th>
+                            <th>Vel. Max. na Atmosfera</th>
                             <th>Modelo</th>
                             <th>Qnt. Max. de Passageiros</th>
                         </tr>

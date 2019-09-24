@@ -17,9 +17,8 @@ export default class Planets extends Component {
 
     render() {
         return (
-            <div style={{ 'padding': '200px 200px 100px 0' }}>
-                <h3>Planetas</h3>
-                <br />
+            <div style={{ padding: '200px 200px 100px 200px' }}>
+                <h3 style={{ marginBottom: 30 }} >Planetas</h3>
 
                 <Table striped bordered hover>
                     <thead>
