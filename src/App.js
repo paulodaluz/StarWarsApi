@@ -29,6 +29,7 @@ class App extends React.Component {
 					<Route path="/planetas" component={Planets} />
 					<Route path="/species" component={Species} />
 					<Route path="/starships" component={Starships} />
+					<Route path="*" component={Home} />
 				</Switch>
 				<Footer/>
 			</HashRouter>
