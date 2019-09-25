@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 export default class Home extends Component {
     render() {
@@ -14,7 +15,8 @@ export default class Home extends Component {
                                         <h2>Paulo Ricardo da Luz Júnior</h2>
                                         <h3>1116505@imed.edu.br</h3>
                                         <p>RA: 1116505</p>
-                                        <a className="banner_btn" href="/">Enviar um Email</a>
+                                        {/* <a className="banner_btn" href="/">Enviar um Email</a> */}
+                                        <Link to="/"><Button className="banner_btn" variant="light">Enviar um Email</Button></Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-4">
