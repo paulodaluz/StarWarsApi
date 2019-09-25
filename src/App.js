@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { HashRouter } from 'react-router-dom'
 
 //Pages
@@ -19,19 +19,19 @@ class App extends React.Component {
   render() {
     return (
       <div>
-		<BrowserRouter>
-			<Header/>
-			<Switch>
-				<Route path="/" exact={true} component={Home} />
-				<Route path="/login" component={Login} />
-				<Route path="/filmes" component={Films} />
-				<Route path="/pessoas" component={People} />
-				<Route path="/planetas" component={Planets} />
-				<Route path="/species" component={Species} />
-				<Route path="/starships" component={Starships} />
-			</Switch>
-			<Footer/>
-		</BrowserRouter>
+			<HashRouter>
+				<Header/>
+				<Switch>
+					<Route path="/" exact={true} component={Home} />
+					<Route path="/login" component={Login} />
+					<Route path="/filmes" component={Films} />
+					<Route path="/pessoas" component={People} />
+					<Route path="/planetas" component={Planets} />
+					<Route path="/species" component={Species} />
+					<Route path="/starships" component={Starships} />
+				</Switch>
+				<Footer/>
+			</HashRouter>
       </div>
     );
   }
