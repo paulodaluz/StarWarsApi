@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import * as apisw from '../services/apisw';
+import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import './Species.css';
 
 export default class Species extends Component {
     constructor(props) {

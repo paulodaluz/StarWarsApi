@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import * as apisw from '../services/apisw';
+import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import './Films.css';
 
 export default class Films extends Component {
     constructor(props) {

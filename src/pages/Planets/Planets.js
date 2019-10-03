@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import * as apisw from '../services/apisw';
+import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import './Planets.css';
 
 export default class Planets extends Component {
     constructor(props) {

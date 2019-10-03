@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import './Login.css';
 
 export default class Login extends Component {
     render() {
         return (
             <div style={{ 'padding': '200px 200px 100px 0' }}>
-                <h1>Login</h1>
+                <div>
+                    <h1>Login</h1>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Endereço de email</Form.Label>
@@ -24,7 +26,7 @@ export default class Login extends Component {
                     <Button variant="primary" type="submit">Logar</Button>
                     
                 </Form>
-
+                </div>
             </div>
         )
     }

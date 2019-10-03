@@ -3,17 +3,17 @@ import { Switch, Route } from 'react-router-dom';
 import { HashRouter } from 'react-router-dom'
 
 //Pages
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Films from './pages/Films';
-import People from './pages/People';
-import Planets from './pages/Planets';
-import Species from './pages/Species';
-import Starships from './pages/Starships';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Films from './pages/Films/Films';
+import People from './pages/People/People';
+import Planets from './pages/Planets/Planets';
+import Species from './pages/Species/Species';
+import Starships from './pages/Starships/Starships';
 
 //Components
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 class App extends React.Component {
   render() {

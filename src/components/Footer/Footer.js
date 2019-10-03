@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Footer.css';
 
 export default class Footer extends Component {
     render() {
@@ -24,7 +25,7 @@ export default class Footer extends Component {
                                     <div id="mc_embed_signup">
                                         <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" className="subscribe_form relative">
                                             <div className="input-group d-flex flex-row">
-                                                <input name="EMAIL" placeholder="Digite seu endereço de email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email" />
+                                                <input name="EMAIL" placeholder="Digite seu endereço de email" type="email" />
                                                 <button className="btn sub-btn"><span className="lnr lnr-arrow-right"></span></button>
                                             </div>
                                             <div className="mt-10 info"></div>
