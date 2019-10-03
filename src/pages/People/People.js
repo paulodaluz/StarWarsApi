@@ -23,7 +23,7 @@ export default class People extends Component {
         return (
             <div className="padding-principal">
                 <h3 style={{ marginBottom: 30 }} className="centraliza-titulo">Personagens</h3>
-                <Table striped bordered hover className="centraliza-tabela">
+                <Table striped bordered hover className="centraliza-tabela centraliza-colunasTabela">
                     <thead>
                         <tr>
                             <th>#id</th>

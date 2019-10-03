@@ -24,7 +24,7 @@ export default class Planets extends Component {
             <div className="padding-principal">
                 <h3 style={{ marginBottom: 30 }} className="centraliza-titulo">Planetas</h3>
 
-                <Table striped bordered hover className="centraliza-tabela">
+                <Table striped bordered hover className="centraliza-tabela centraliza-colunasTabela">
                     <thead>
                         <tr>
                             <th>#id</th>
