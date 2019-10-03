@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+
+//Import CSS
+import '../../App.css';
 import './Starships.css';
 
 export default class Starships extends Component {
@@ -18,10 +21,11 @@ export default class Starships extends Component {
 
     render() {
         return (
-            <div style={{ 'padding': '200px 200px 100px 0' }}>
-                <h3 style={{ marginBottom: 30 }} >Naves Espáciais</h3>
-
-                <Table striped bordered hover>
+            <div className="padding-principal">
+                <h3 style={{ marginBottom: 30 }} className="centraliza-titulo">Naves Espáciais</h3>
+            
+                <div className="centraliza-tabela">
+                    <Table striped bordered hover className="centraliza-tabela centraliza-colunasTabela">
                     <thead>
                         <tr>
                             <th>#id</th>
@@ -29,7 +33,7 @@ export default class Starships extends Component {
                             <th>Capacidade de carga</th>
                             <th>Consumiveis</th>
                             <th>Equipe Técnica</th>
-                            <th>hyperdrive_rating</th>
+                            <th>Classificação Hyperdrive</th>
                             <th>Comprimento</th>
                             <th>Fabricante</th>
                             <th>Vel. Max. na Atmosfera</th>
@@ -53,6 +57,7 @@ export default class Starships extends Component {
                 })}
                     </thead>
                 </Table>
+                </div>
             </div>
         )
     }

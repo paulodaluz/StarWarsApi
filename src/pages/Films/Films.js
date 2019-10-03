@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+
+//Import CSS
+import '../../App.css';
 import './Films.css';
 
 export default class Films extends Component {
@@ -18,10 +21,10 @@ export default class Films extends Component {
 
     render() {
         return (
-            <div style={{ padding: '200px 200px 100px 200px' }}>
-                <h3 style={{ marginBottom: 30 }} >Filmes</h3>
-                <Table striped bordered hover>
-                    <thead>
+            <div className="padding-principal">
+                <h3 style={{ marginBottom: 30 }} className="centraliza-titulo" >Filmes</h3>
+                <Table striped bordered hover className="centraliza-tabela">
+                    <thead className="centraliza-colunasTabela">
                         <tr>
                             <th>#id</th>
                             <th>Titulo</th>

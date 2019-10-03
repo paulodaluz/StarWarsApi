@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+
+//Import CSS
+import '../../App.css';
 import './Home.css';
 
 export default class Home extends Component {

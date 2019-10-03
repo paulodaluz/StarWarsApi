@@ -1,0 +1,19 @@
+.padding-principal {
+    padding: 250px 0 148px 0;
+}
+
+.centraliza-titulo {
+    text-align: center;
+}
+
+.centraliza-tabela {
+    width: 75%;
+    margin: auto;
+}
+
+.centraliza-colunasTabela th {
+    /* vertical-align: inherit; */
+    text-align: center;
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
+}
