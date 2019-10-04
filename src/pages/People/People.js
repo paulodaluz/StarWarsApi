@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import { BeatLoader } from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
@@ -10,13 +11,17 @@ export default class People extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            persons: []
+            persons: [],
+            loading: true
         };
     }
 
     componentDidMount() {
         apisw.getPersons()
-            .then(persons => this.setState({ persons }))
+            .then(persons => {
+                this.setState({ persons })
+                this.setState({ loading: false })
+        })
     }
 
     render() {
@@ -33,6 +38,15 @@ export default class People extends Component {
                             <th>Altura</th>
                             <th>Peso</th>
                         </tr>
+
+                        <div className="loading-tables">
+                            <BeatLoader
+                                sizeUnit={"px"}
+                                size={80}
+                                color={'black'}
+                                loading={this.state.loading}
+                        />
+                        </div>
 
                         {this.state.persons.map((item, i) => {
                             return <tr key={i}> 

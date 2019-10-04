@@ -14,3 +14,9 @@
 .centraliza-colunasTabela th {
     text-align: center;
 }
+
+.loading-tables {
+    position: absolute;
+    left: 41%;
+    top: 52%;
+}

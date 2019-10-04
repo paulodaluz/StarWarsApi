@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import { BeatLoader } from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
@@ -10,13 +11,17 @@ export default class Planets extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            planets: []
+            planets: [],
+            loading: true
         };
     }
 
     componentDidMount() {
         apisw.getPlanets()
-            .then(planets => this.setState({ planets }))
+            .then(planets => {
+                this.setState({ planets })
+                this.setState({ loading: false })
+            })
     }
 
     render() {
@@ -36,6 +41,16 @@ export default class Planets extends Component {
                             <th>Gravidade</th>
                             <th>Terreno</th>
                         </tr>
+
+                        <div className="loading-tables">
+                            <BeatLoader
+                                sizeUnit={"px"}
+                                size={80}
+                                color={'black'}
+                                loading={this.state.loading}
+                            />
+                        </div>
+                        
                             {this.state.planets.map((item, i) => {
                                 return <tr key={i}>
                                     <th>{i+1}</th>

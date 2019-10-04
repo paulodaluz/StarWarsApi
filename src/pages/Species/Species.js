@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import { BeatLoader } from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
@@ -10,13 +11,17 @@ export default class Species extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            species: []
+            species: [],
+            loading: true
         };
     }
 
     componentDidMount() {
         apisw.getSpecies()
-            .then(species => this.setState({ species }))
+            .then(species => {
+                this.setState({ species })
+                this.setState({ loading: false })
+            })
     }
 
     render() {
@@ -36,6 +41,15 @@ export default class Species extends Component {
                             <th>Lingua</th>
                             <th>Cor da Skin</th>
                         </tr>
+
+                        <div className="loading-tables">
+                            <BeatLoader
+                                sizeUnit={"px"}
+                                size={80}
+                                color={'black'}
+                                loading={this.state.loading}
+                            />
+                        </div>
 
                         {this.state.species.map((item, i) => {
                             return <tr key={i}>

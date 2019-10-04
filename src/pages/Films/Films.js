@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import {BeatLoader} from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
@@ -10,13 +11,17 @@ export default class Films extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            films: []
+            films: [],
+            loading: true
         };
     }
 
     componentDidMount() {
         apisw.getFilms()
-            .then(films => this.setState({ films }))
+            .then(films => {
+                this.setState({ films })
+                this.setState({ loading: false })
+            })
     }
 
     render() {
@@ -31,6 +36,15 @@ export default class Films extends Component {
                             <th>Diretor</th>
                             <th>Data de realização</th>
                         </tr>
+                        
+                        <div className="loading-tables">
+                            <BeatLoader
+                                sizeUnit={"px"}
+                                size={80}
+                                color={'black'}
+                                loading={this.state.loading}
+                        />
+                        </div>
 
                         {this.state.films.map((item, i) => {
                             return <tr key={i}>
@@ -38,7 +52,7 @@ export default class Films extends Component {
                                 <th>{item.title}</th>
                                 <th>{item.director}</th>
                                 <th>{item.release_date}</th>
-                            </tr>   
+                            </tr>
                         })}
                     </thead>
                 </Table>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apisw';
 import Table from 'react-bootstrap/Table';
+import { BeatLoader } from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
@@ -10,13 +11,17 @@ export default class Starships extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            starships: []
+            starships: [],
+            loading: true
         };
     }
 
     componentDidMount() {
         apisw.getStarships()
-            .then(starships => this.setState({ starships }))
+            .then(starships => {
+                this.setState({ starships })
+                this.setState({ loading: false })
+            })
     }
 
     render() {
@@ -40,20 +45,30 @@ export default class Starships extends Component {
                             <th>Modelo</th>
                             <th>Qnt. Max. de Passageiros</th>
                         </tr>
-                {this.state.starships.map((item, i) => {
-                    return <tr key={i}>
-                        <th>{i+1}</th>
-                        <th>{item.name}</th>
-                        <th>{item.cargo_capacity}</th>
-                        <th>{item.consumables}</th>
-                        <th>{item.crew}</th>
-                        <th>{item.hyperdrive_rating}</th>
-                        <th>{item.length}</th>
-                        <th>{item.manufacturer}</th>
-                        <th>{item.max_atmosphering_speed}</th>
-                        <th>{item.model}</th>
-                        <th>{item.passengers}</th>
-                    </tr>
+
+                            <div className="loading-tables-starships">
+                            <BeatLoader
+                                sizeUnit={"px"}
+                                size={80}
+                                color={'black'}
+                                loading={this.state.loading}
+                            />
+                        </div>
+
+                    {this.state.starships.map((item, i) => {
+                        return <tr key={i}>
+                            <th>{i+1}</th>
+                            <th>{item.name}</th>
+                            <th>{item.cargo_capacity}</th>
+                            <th>{item.consumables}</th>
+                            <th>{item.crew}</th>
+                            <th>{item.hyperdrive_rating}</th>
+                            <th>{item.length}</th>
+                            <th>{item.manufacturer}</th>
+                            <th>{item.max_atmosphering_speed}</th>
+                            <th>{item.model}</th>
+                            <th>{item.passengers}</th>
+                        </tr>
                 })}
                     </thead>
                 </Table>
