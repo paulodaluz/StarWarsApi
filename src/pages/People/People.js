@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as apisw from '../../services/apisw';
+import * as apisw from '../../services/apiswGets';
 import Table from 'react-bootstrap/Table';
 import { BeatLoader } from 'react-spinners';
 
@@ -39,15 +39,6 @@ export default class People extends Component {
                             <th>Peso</th>
                         </tr>
 
-                        <div className="loading-tables">
-                            <BeatLoader
-                                sizeUnit={"px"}
-                                size={80}
-                                color={'black'}
-                                loading={this.state.loading}
-                        />
-                        </div>
-
                         {this.state.persons.map((item, i) => {
                             return <tr key={i}> 
                             <th>{i+1}</th>
@@ -60,6 +51,13 @@ export default class People extends Component {
                         })}
                     </thead>
                 </Table>
+                
+                <BeatLoader
+                    sizeUnit={"px"}
+                    size={80}
+                    color={'black'}
+                    loading={this.state.loading}
+                />
             </div>
         )
     }
