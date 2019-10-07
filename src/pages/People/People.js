@@ -42,12 +42,12 @@ export default class People extends Component {
 
                             {this.state.persons.map((item, i) => {
                                 return <tr key={i}> 
-                                <th>{i+1}</th>
-                                <th>{item.name}</th>
-                                <th>{item.gender}</th>
-                                <th>{item.skin_color}</th>
-                                <th>{item.height}</th>
-                                <th>{item.mass}</th>
+                                    <th>{i+1}</th>
+                                    <th>{item.name}</th>
+                                    <th>{item.gender}</th>
+                                    <th>{item.skin_color}</th>
+                                    <th>{item.height}</th>
+                                    <th>{item.mass}</th>
                                 </tr>
                             })}
                         </thead>

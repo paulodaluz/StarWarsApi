@@ -43,18 +43,18 @@ export default class Planets extends Component {
                             </tr>
 
 
-                                {this.state.planets.map((item, i) => {
-                                    return <tr key={i}>
-                                        <th>{i+1}</th>
-                                        <th>{item.name}</th>
-                                        <th>{item.climate}</th>
-                                        <th>{item.population}</th>
-                                        <th>{item.orbital_period}</th>
-                                        <th>{item.diameter}</th>
-                                        <th>{item.gravity}</th>
-                                        <th>{item.terrain}</th>
-                                    </tr>   
-                                })}
+                            {this.state.planets.map((item, i) => {
+                                return <tr key={i}>
+                                    <th>{i+1}</th>
+                                    <th>{item.name}</th>
+                                    <th>{item.climate}</th>
+                                    <th>{item.population}</th>
+                                    <th>{item.orbital_period}</th>
+                                    <th>{item.diameter}</th>
+                                    <th>{item.gravity}</th>
+                                    <th>{item.terrain}</th>
+                                </tr>   
+                            })}
                         </thead>
                     </Table>
                 </div>
