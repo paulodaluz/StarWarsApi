@@ -10,3 +10,13 @@
 .padding-login {
     padding: 250px 0 148px 0;
 }
+
+@media only screen and (max-width: 769px) {
+    .padding-login {
+        padding: 250px 38px 148px 38px;
+    }
+
+    .button-logar {
+        margin-left: 38.2%;
+    }
+}
