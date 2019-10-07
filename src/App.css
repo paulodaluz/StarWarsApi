@@ -20,3 +20,20 @@
     left: 41%;
     top: 52%;
 }
+
+@media only screen and (max-width: 769px) {
+    
+    .padding-principal {
+    padding: 100px 0 50px 0;
+    }
+
+    .css-0 {
+    position: absolute;
+    left: 14%;
+    top: 66%;
+    }
+
+    .header_area .navbar {
+        background: black;
+    }
+}
