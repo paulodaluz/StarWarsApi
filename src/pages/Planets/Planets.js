@@ -28,36 +28,36 @@ export default class Planets extends Component {
         return (
             <div className="padding-principal">
                 <h3 style={{ marginBottom: 30 }} className="centraliza-titulo">Planetas</h3>
+                <div className="centraliza-tabela scroll-table">
+                    <Table striped bordered hover className="centraliza-colunasTabela">
+                        <thead>
+                            <tr>
+                                <th>#id</th>
+                                <th>Nome</th>
+                                <th>Clima</th>
+                                <th>População</th>
+                                <th>Período Orbital</th>
+                                <th>Diametro</th>
+                                <th>Gravidade</th>
+                                <th>Terreno</th>
+                            </tr>
 
-                <Table striped bordered hover className="centraliza-tabela centraliza-colunasTabela">
-                    <thead>
-                        <tr>
-                            <th>#id</th>
-                            <th>Nome</th>
-                            <th>Clima</th>
-                            <th>População</th>
-                            <th>Período Orbital</th>
-                            <th>Diametro</th>
-                            <th>Gravidade</th>
-                            <th>Terreno</th>
-                        </tr>
 
-
-                            {this.state.planets.map((item, i) => {
-                                return <tr key={i}>
-                                    <th>{i+1}</th>
-                                    <th>{item.name}</th>
-                                    <th>{item.climate}</th>
-                                    <th>{item.population}</th>
-                                    <th>{item.orbital_period}</th>
-                                    <th>{item.diameter}</th>
-                                    <th>{item.gravity}</th>
-                                    <th>{item.terrain}</th>
-                                </tr>   
-                            })}
-                    </thead>
-                </Table>
-                
+                                {this.state.planets.map((item, i) => {
+                                    return <tr key={i}>
+                                        <th>{i+1}</th>
+                                        <th>{item.name}</th>
+                                        <th>{item.climate}</th>
+                                        <th>{item.population}</th>
+                                        <th>{item.orbital_period}</th>
+                                        <th>{item.diameter}</th>
+                                        <th>{item.gravity}</th>
+                                        <th>{item.terrain}</th>
+                                    </tr>   
+                                })}
+                        </thead>
+                    </Table>
+                </div>
                 <BeatLoader
                     sizeUnit={"px"}
                     size={80}

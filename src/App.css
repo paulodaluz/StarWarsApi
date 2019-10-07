@@ -16,21 +16,24 @@
 }
 
 .css-0 {
-    position: absolute;
-    left: 41%;
-    top: 52%;
+    margin: 46px 0px 0px 41.5%;
 }
 
 @media only screen and (max-width: 769px) {
-    
+    .scroll-table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
     .padding-principal {
-    padding: 100px 0 50px 0;
+        padding: 100px 0 50px 0;
     }
 
     .css-0 {
-    position: absolute;
-    left: 14%;
-    top: 66%;
+        position: absolute;
+        left: 14%;
+        top: 66%;
     }
 
     .header_area .navbar {

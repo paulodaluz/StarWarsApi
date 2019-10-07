@@ -28,9 +28,8 @@ export default class Starships extends Component {
         return (
             <div className="padding-principal">
                 <h3 style={{ marginBottom: 30 }} className="centraliza-titulo">Naves Espáciais</h3>
-            
-                <div className="centraliza-tabela">
-                    <Table striped bordered hover className="centraliza-tabela centraliza-colunasTabela">
+                <div className="centraliza-tabela scroll-table">
+                    <Table striped bordered hover className="centraliza-colunasTabela">
                         <thead>
                             <tr>
                                 <th>#id</th>
@@ -41,30 +40,30 @@ export default class Starships extends Component {
                                 <th>Classificação Hyperdrive</th>
                                 <th>Comprimento</th>
                                 <th>Fabricante</th>
-                                <th>Vel. Max. na Atmosfera</th>
+                                <th>Vel. Max. Atmosfera</th>
                                 <th>Modelo</th>
-                                <th>Qnt. Max. de Passageiros</th>
+                                <th>Qnt. Max. Passageiros</th>
                             </tr>
 
-                        {this.state.starships.map((item, i) => {
-                            return <tr key={i}>
-                                <th>{i+1}</th>
-                                <th>{item.name}</th>
-                                <th>{item.cargo_capacity}</th>
-                                <th>{item.consumables}</th>
-                                <th>{item.crew}</th>
-                                <th>{item.hyperdrive_rating}</th>
-                                <th>{item.length}</th>
-                                <th>{item.manufacturer}</th>
-                                <th>{item.max_atmosphering_speed}</th>
-                                <th>{item.model}</th>
-                                <th>{item.passengers}</th>
-                            </tr>
+                            {this.state.starships.map((item, i) => {
+                                return <tr key={i}>
+                                    <th>{i+1}</th>
+                                    <th>{item.name}</th>
+                                    <th>{item.cargo_capacity}</th>
+                                    <th>{item.consumables}</th>
+                                    <th>{item.crew}</th>
+                                    <th>{item.hyperdrive_rating}</th>
+                                    <th>{item.length}</th>
+                                    <th>{item.manufacturer}</th>
+                                    <th>{item.max_atmosphering_speed}</th>
+                                    <th>{item.model}</th>
+                                    <th>{item.passengers}</th>
+                                </tr>
                         })}
                         </thead>
                     </Table>
 
-                    <div className='teste'>
+                    <div className='loading-especifico'>
                         <BeatLoader
                             sizeUnit={"px"}
                             size={80}

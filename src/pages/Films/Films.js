@@ -28,25 +28,28 @@ export default class Films extends Component {
         return (
             <div className="padding-principal">
                 <h3 style={{ marginBottom: 30 }} className="centraliza-titulo" >Filmes</h3>
-                <Table striped bordered hover className="centraliza-tabela">
-                    <thead className="centraliza-colunasTabela">
-                        <tr>
-                            <th>#id</th>
-                            <th>Titulo</th>
-                            <th>Diretor</th>
-                            <th>Data de realização</th>
-                        </tr>
-                        
-                        {this.state.films.map((item, i) => {
-                            return <tr key={i}>
-                                <th>{i+1}</th>
-                                <th>{item.title}</th>
-                                <th>{item.director}</th>
-                                <th>{item.release_date}</th>
+
+                <div className="centraliza-tabela scroll-table">
+                    <Table striped bordered hover className="centraliza-colunasTabela">
+                        <thead>
+                            <tr>
+                                <th>#id</th>
+                                <th>Titulo</th>
+                                <th>Diretor</th>
+                                <th>Data de realização</th>
                             </tr>
-                        })}
-                    </thead>
-                </Table>
+                            
+                            {this.state.films.map((item, i) => {
+                                return <tr key={i}>
+                                    <th>{i+1}</th>
+                                    <th>{item.title}</th>
+                                    <th>{item.director}</th>
+                                    <th>{item.release_date}</th>
+                                </tr>
+                            })}
+                        </thead>
+                    </Table>
+                </div>
                 <BeatLoader
                     sizeUnit={"px"}
                     size={80}
