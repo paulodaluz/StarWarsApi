@@ -28,10 +28,10 @@ export default class Login extends Component {
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Endereço de email</Form.Label>
-                            <Form.Control type="email" placeholder="Digite seu email" 
-                                onInput={(e) => 
-                                    this.setState({ email: e.target.value })}
-                            />
+                                <Form.Control type="email" placeholder="Digite seu email" 
+                                    onInput={(e) => 
+                                        this.setState({ email: e.target.value })}
+                                />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
