@@ -27,7 +27,7 @@ export default class Planets extends Component {
     render() {
         return (
             <div className="padding-principal">
-                <h3 style={{ marginBottom: 30 }} className="centraliza-titulo">Planetas</h3>
+                <h1 style={{ marginBottom: 30 }} className="centraliza-titulo titulo-grande">Planetas</h1>
                 <div className="centraliza-tabela scroll-table">
                     <Table striped bordered hover className="centraliza-colunasTabela">
                         <thead>
