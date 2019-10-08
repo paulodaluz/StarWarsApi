@@ -20,7 +20,7 @@ export default class Login extends Component {
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Senha</Form.Label>
-                        <Form.Control type="password" placeholder="Digite sua senha" />
+                        <Form.Control type="current-password" placeholder="Digite sua senha" />
                     </Form.Group>
                         <Button variant="dark" type="submit" className="button-logar">Logar</Button>
                 </Form>
