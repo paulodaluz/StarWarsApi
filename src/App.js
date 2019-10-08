@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { HashRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom';
 
 //Pages
 import Home from './pages/Home/Home';
