@@ -27,7 +27,7 @@ export default class Starships extends Component {
     render() {
         return (
             <div className="padding-principal">
-                <h1 style={{ marginBottom: 30 }} className="centraliza-titulo titulo-grande">Naves Espáciais</h1>
+                <h1 style={{ marginBottom: 30 }} className="centraliza-titulo titulo-grande">Naves Espaciais</h1>
                 <div className="centraliza-tabela scroll-table">
                     <Table striped bordered hover className="centraliza-colunasTabela">
                         <thead>
