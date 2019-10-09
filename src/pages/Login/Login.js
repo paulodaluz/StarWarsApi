@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 //Import CSS
 import '../../App.css';
@@ -45,7 +46,9 @@ export default class Login extends Component {
                             <Button variant="dark" className="button-logar" 
                             onClick={() => this.logar()} 
                             >Logar</Button>
-                            
+                        <div className="criar-cadastro">
+                            <Link to="/cadastro">Voce ainda não possui uma conta?</Link>
+                        </div>
                     </Form>
                 </div>
             </div>
