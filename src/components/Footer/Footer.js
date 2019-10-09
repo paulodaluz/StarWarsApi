@@ -26,7 +26,7 @@ export default class Footer extends Component {
                                     <div className="f_title">
                                         <h3>Sobre mim</h3>
                                     </div>
-                                    <p>Gamer, desenvolvedor e louco pelas tecnologias mais atuais existentes no mercado.</p>
+                                    <p>Fascinado por tecnologia, contato com a área de TI desde os 15 anos, possuo agilidade, determinação e produtividade.<br/> Desenvolvedor, Cursando Ciências da Computação e em busca de conhecimento/oportunidades nas diversas linguagens/áreas de programação e TI. </p>
                                 </aside>
                             </div>
 
