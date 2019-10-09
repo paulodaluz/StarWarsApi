@@ -62,6 +62,7 @@ export default class Footer extends Component {
                                         <li><a href="https://www.facebook.com/PauloDaLuzz"><i className="fa fa-facebook"></i></a></li>
                                         <li><a href="https://twitter.com/Paulo_Luzz"><i className="fa fa-twitter"></i></a></li>
                                         <li><a href="https://www.linkedin.com/in/paulo-ricardo-da-luz-j%C3%BAnior-5a3953164/"><i className="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://github.com/paulodaluz"><i className="fa fa-github"></i></a></li>
                                     </ul>
                                 </aside>
                             </div>

@@ -14,7 +14,7 @@ export default class Login extends Component {
             nome: '',
             idade: '',
             email: '',
-            senha: ''            
+            senha: ''
         };
     }
 
