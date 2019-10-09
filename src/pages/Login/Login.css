@@ -12,8 +12,27 @@
 }
 
 .criar-cadastro {
-    float: right;
-    margin: 5% 28.5% 0px 0px;
+    margin: 5% 28.5% 0px 33%;
+}
+
+.imagem-background-login {
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/imagemStarWarsLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.painel {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 3px 20px 0 rgba(0,0,0,.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 3px 20px 0 rgba(0,0,0,.15);
+    background-color: #f9f9fb;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
 }
 
 @media only screen and (max-width: 769px) {

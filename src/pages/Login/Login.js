@@ -23,8 +23,8 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="padding-login">
-                <div className="centralizar">
+            <div className="padding-login imagem-background-login">
+                <div className="painel">
                     <h1 className="centraliza-titulo">Login</h1>
                     <Form>
                         <Form.Group controlId="formBasicEmail">

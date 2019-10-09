@@ -28,7 +28,7 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="padding-principal imagem-background">
+            <div className="padding-principal imagem-background-cadastro">
                 <div className="painel">
                     <h1 className="centraliza-titulo">Cadastro</h1>
                     <Form>
@@ -70,7 +70,7 @@ export default class Login extends Component {
                                         this.setState({ idade: e.target.value })}
                                 />
                         </Form.Group>
-                        
+
                         <Button variant="dark" className="button-cadastrar" 
                         onClick={() => this.criar()} 
                         >Cadastrar</Button>
