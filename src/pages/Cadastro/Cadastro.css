@@ -22,8 +22,12 @@
     display: -ms-inline-flexbox;
 }
 
-@media only screen and (max-width: 769px) {
+.entra-login {
+    margin: 3% 35.5% 0px 35%;
+}
 
+@media only screen and (max-width: 769px) {
+    
     .button-cadastrar {
         margin-left: 38.2%;
     }
@@ -31,5 +35,8 @@
     .painel {
         max-width: 332px;
         padding: 16px;
+    }
+    .entra-login {
+        margin: 3% 10.5% 0px 23.5%;
     }
 }

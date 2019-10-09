@@ -43,9 +43,10 @@ export default class Login extends Component {
                                 />
                         </Form.Group>
 
-                            <Button variant="dark" className="button-logar" 
+                        <Button variant="dark" className="button-logar" 
                             onClick={() => this.logar()} 
-                            >Logar</Button>
+                        >Logar</Button>
+
                         <div className="criar-cadastro">
                             <Link to="/cadastro">Voce ainda não possui uma conta?</Link>
                         </div>
