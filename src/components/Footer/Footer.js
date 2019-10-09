@@ -2,9 +2,22 @@ import React, { Component } from 'react';
 import './Footer.css';
 
 export default class Footer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: ''
+        };
+    }
+
+    registrar() {
+        var email = this.state.email
+        console.log(email);
+    }
+
     render() {
         return (
             <div>
+
                 <footer className="footer_area p_120">
                     <div className="container">
                         <div className="row footer_inner">
@@ -16,6 +29,7 @@ export default class Footer extends Component {
                                     <p>Gamer, desenvolvedor e louco pelas tecnologias mais atuais existentes no mercado.</p>
                                 </aside>
                             </div>
+
                             <div className="col-lg-5 col-sm-6">
                                 <aside className="f_widget news_widget">
                                     <div className="f_title">
@@ -23,16 +37,21 @@ export default class Footer extends Component {
                                     </div>
                                     <p>Mantenha-se atualizado com as nossas últimas tendências</p>
                                     <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" className="subscribe_form relative">
+                                        {/* <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" className="subscribe_form relative"> */}
                                             <div className="input-group d-flex flex-row">
-                                                <input name="EMAIL" placeholder="Digite seu endereço de email" type="email" />
-                                                <button className="btn sub-btn"><span className="lnr lnr-arrow-right"></span></button>
+                                                <input name="EMAIL" placeholder="Digite seu endereço de email" type="email" 
+                                                    onInput={(e) =>
+                                                        this.setState({ email: e.target.value })}
+                                                />
+                                                <button className="btn sub-btn"><span className="lnr lnr-arrow-right" 
+                                                onClick={() => this.registrar()} ></span></button>
                                             </div>
                                             <div className="mt-10 info"></div>
-                                        </form>
+                                        {/* </form> */}
                                     </div>
                                 </aside>
                             </div>
+
                             <div className="col-lg-2">
                                 <aside className="f_widget social_widget">
                                     <div className="f_title">
