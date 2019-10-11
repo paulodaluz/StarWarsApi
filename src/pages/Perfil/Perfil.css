@@ -1,0 +1,22 @@
+.dados-pessoa {
+  font-size: 22px;
+}
+
+.imagem-background-perfil {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/imagemStarWarsPerfil.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.foto-de-perfil {
+  width: 82%;
+  height: 97%;
+  margin: 25px 0 17px 183px;
+}
+
+.bola {
+  margin-top: 14px;
+  padding: 10px 4px 19px 0px;
+}
