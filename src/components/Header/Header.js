@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
+//Import CSS
 import './Header.css';
 
 export default class Header extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            logado: true
+        }
+    }
+    exibeUsuario(props) {
+        const logado= this.state.logado;
+        if(logado === true){
+            return <li className="nav-item"><Link to="/perfil" className="nav-link">Meu Perfil</Link></li>
+        }           
+        return <li className="nav-item"><Link to="/login" className="nav-link">Login</Link></li>
+
+    }
     render() {
         return (
             <div>
@@ -55,7 +71,7 @@ export default class Header extends Component {
                                                 <li className="nav-item"><Link to="/starships" className="nav-link">Naves</Link></li>
                                             </ul>
                                         </li>
-                                        <li className="nav-item"><Link to="/login" className="nav-link">Login</Link></li>
+                                        {this.exibeUsuario()}
                                     </ul>
                                 </div>
                             </div>

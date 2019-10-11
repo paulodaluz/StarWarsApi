@@ -5,6 +5,7 @@ import { HashRouter } from 'react-router-dom';
 //Pages
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import Perfil from './pages/Perfil/Perfil';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Films from './pages/Films/Films';
 import People from './pages/People/People';
@@ -25,6 +26,7 @@ class App extends React.Component {
 				<Switch>
 					<Route path="/" exact={true} component={Home} />
 					<Route path="/login" component={Login} />
+					<Route path="/perfil" component={Perfil} />
 					<Route path="/cadastro" component={Cadastro} />
 					<Route path="/filmes" component={Films} />
 					<Route path="/pessoas" component={People} />
