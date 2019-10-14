@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apiswGets';
 import Table from 'react-bootstrap/Table';
-import { BeatLoader } from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
 import './Planets.css';
+
+//Import componentes
+import Loading from '../../components/Atomos/Loading/Loading';
 
 export default class Planets extends Component {
     constructor(props) {
@@ -42,7 +44,6 @@ export default class Planets extends Component {
                                 <th>Terreno</th>
                             </tr>
 
-
                             {this.state.planets.map((item, i) => {
                                 return <tr key={i}>
                                     <th>{i+1}</th>
@@ -58,12 +59,7 @@ export default class Planets extends Component {
                         </thead>
                     </Table>
                 </div>
-                <BeatLoader
-                    sizeUnit={"px"}
-                    size={80}
-                    color={'black'}
-                    loading={this.state.loading}
-                />
+                <Loading loading={this.state.loading} />
             </div>
         )
     }

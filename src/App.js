@@ -14,8 +14,8 @@ import Species from './pages/Species/Species';
 import Starships from './pages/Starships/Starships';
 
 //Components
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from './components/Moleculas/Header/Header';
+import Footer from './components/Moleculas/Footer/Footer';
 
 class App extends React.Component {
   render() {

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import * as apisw from '../../services/apiswGets';
 import Table from 'react-bootstrap/Table';
-import { BeatLoader } from 'react-spinners';
 
 //Import CSS
 import '../../App.css';
 import './Species.css';
+
+//Import componentes
+import Loading from '../../components/Atomos/Loading/Loading';
 
 export default class Species extends Component {
     constructor(props) {
@@ -57,12 +59,7 @@ export default class Species extends Component {
                         </thead>
                     </Table>
                 </div>
-                <BeatLoader
-                    sizeUnit={"px"}
-                    size={80}
-                    color={'black'}
-                    loading={this.state.loading}
-                />
+                <Loading loading={this.state.loading}/>
             </div>
         )
     }
