@@ -24,5 +24,6 @@ yarn-error.log*
 
 # Archives
 package-lock.json
+yarn.lock
 hosting.YnVpbGQ.cache
 hosting..cache
