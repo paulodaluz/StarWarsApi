@@ -1,3 +1,5 @@
+![Fluxo app](https://user-images.githubusercontent.com/47355769/114118830-e4d0d980-98bf-11eb-8f0b-78a41603b75e.jpg)
+
 # Descrição do Projeto
 Este projeto foi desenvolvido com o intuito de atender aos requisitos de um trabalho da faculdade, condizente a matéria de Tópicos de Programação Web.
 
